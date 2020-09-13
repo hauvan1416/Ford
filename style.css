@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header .eyebrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 3%;
+    width: auto;
+}
+header .eyebrow .eyebrow-left-item ul{
+    display: flex ;
+    padding: 5px 8px 5px 0px;   
+}
+header .eyebrow .eyebrow-left-item ul li{
+    list-style-type: none;   
+}
+header .eyebrow .eyebrow-left-item ul li.text{
+     padding-top: 9px;
+}
+header .eyebrow .eyebrow-left-item ul li img {
+    width: 43px;
+    height: 30px;
+}
+header .eyebrow .eyebrow-left-item ul li a{
+    text-decoration: none;
+}
+header .eyebrow .eyebrow-left-item ul li span.text{
+    
+
+}
+header .eyebrow a.eyebrow-left-item{
+    
+    
+}
+header .eyebrow .eyebrow-right-item{
+    margin-top: 10px;
+    text-align: right;
+}
+ 
+
