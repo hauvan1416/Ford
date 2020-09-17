@@ -128,18 +128,43 @@ body{
     top: 126px;
     left: 0px; 
     z-index: 10000;
+    /* overflow: hidden; */
 }
 .carausel-container .carausel-slide img{
-    z-index: 10000;
+    z-index: 100;
+    position: relative;
     
    
 }
+.Btn{  
+    color: #fff;
+    background-color: rgb(85, 85, 85) ;
+    font-size: 2.7rem;
+    padding: 10px 15px 10px 15px;
+    font-weight: 100;
+    opacity: 0.7;
+    
+} 
+#prevBtn{
+    position: absolute;
+    bottom: 25%;
+    left: 0%;
+    z-index: 10001;
+    
+} 
 #nextBtn{
     position: absolute;
+    bottom: 25%;
+    right: 0%;
     z-index: 10001;
-}   
-    
+} 
+.Btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: #0276b3;
+    border: 1px solid #0276b3;
 }
+    
+
 /* END carausel */
  
 
