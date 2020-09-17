@@ -13,20 +13,20 @@ carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 
 //buttonListeners
 nextBtn.addEventListener('click',() => {
-    if(counter >= carauselImages.length - 1) return;
+   /*  if(counter >= carauselImages.length - 1) return; */
     carauselSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
     carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 
 });
 prevBtn.addEventListener('click',() => {
-    if(counter <=0) return;
+    /* if(counter <=0) return; */
     carauselSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
     carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 
 });
-carauselSlide.addEventListener('transitioned', () => {
+/* carauselSlide.addEventListener('transitioned', () => {
     if(carauselImages[counter].id === 'lastClone'){
         carauselSlide.style.transition = "none";
         counter = carauselImages.length - 2;
@@ -37,4 +37,4 @@ carauselSlide.addEventListener('transitioned', () => {
         counter = carauselImages.length - counter;
         carauselSslide.style.transform = 'translateX(' + (-size * counter) +'px)';
     } 
-});
+}); */
