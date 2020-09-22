@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 body{
     max-width: 1440px;
@@ -21,7 +21,7 @@ body{
     font-size: 0.8rem;
     color: #102b4e;
     position: fixed;
-    z-index: 4;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -39,7 +39,7 @@ body{
 .header .eyebrow .eyebrow__left__item ul li{
     list-style-type: none;   
 }
-.header .eyebrow .eyebrow__left__item ul li.text{
+.header .eyebrow .eyebrow__left__item ul li.textspan{
      padding-top: 8px;
      font-size: 0.8rem;
 }
@@ -119,56 +119,99 @@ body{
 
 /* carausel */
 
-.carausel-container{
-    width: 100%;
-    height: auto;
-    margin-top: 126px;  
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1440px;
+  height: auto;
+  margin: auto;
+  background-color: #0276b3;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-top: 126px;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.threedot{
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    
     
     
 
 }
-.carausel-slide{
-    display: flex;
-    height: auto;
-    width: 100%;  
-    
-    
-    
-    
+
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  
 }
-.carausel-container .carausel-slide img{
-    position: relative;
-    
-   
+
+.active, .dot:hover {
+  background-color: #717171;
 }
-.Btn{  
-    color: #fff;
-    background-color: rgb(85, 85, 85) ;
-    font-size: 2.7rem;
-    padding: 10px 15px 10px 15px;
-    font-weight: 100;
-    opacity: 0.7;
-    
-} 
-#prevBtn{
-    position: absolute;
-    bottom: 25%;
-    left: 0%;
-    z-index: 3;
-    
-} 
-#nextBtn{
-    position: absolute;
-    bottom: 25%;
-    right: 0%;
-    z-index: 3;
-} 
-.Btn:hover{
-    background-color: rgb(255, 255, 255);
-    color: #0276b3;
-    border: 1px solid #0276b3;
-}
-    
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out 0.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: 1}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: 1}
+    to {opacity: 1}
+  }
+
+
 
 /* END carausel */
 
@@ -260,7 +303,7 @@ body{
     height: auto;
 }
 .container-car .threecar img{
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 

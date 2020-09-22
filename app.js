@@ -1,41 +1,28 @@
-const carauselSlide = document.querySelector('.carausel-slide');
-const carauselImages = document.querySelectorAll('.carausel-slide img');
+var slideIndex = 1;
+showSlides(slideIndex);
 
-//Button
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-//counter
-let counter = 1;
-const size = carauselImages[0].clientWidth;
-carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-
-//buttonListeners
-nextBtn.addEventListener('click',() => {
-      if(counter >= carauselImages.length - 1) return;   
-    carauselSlide.style.transition = "transform 0.6s ease-in-out";
-    counter++;
-    carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-    
-});
- prevBtn.addEventListener('click',() => {
-      if (counter <= 0) return;   
-    carauselSlide.style.transition = "transform 0.6s ease-in-out";
-    counter--;
-    carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-
-}); 
-  carauselSlide.addEventListener('transitionend', () => {
-      
-    if (carauselImages[counter].id === 'lastClone'){
-        carauselSlide.style.transition = "none";
-        counter = carauselImages.length-2;
-        carauselSslide.style.transform = 'translateX(' + (-size * counter) +'px)';
-    }
-     if (carauselImages[counter].id === 'firstClone'){
-        carauselSlide.style.transition = "none";
-        counter = carauselImages.length - counter;
-        carauselSslide.style.transform = 'translateX(' + (-size * counter) +'px)';
-    }   
-});  
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

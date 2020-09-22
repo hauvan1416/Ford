@@ -20,7 +20,7 @@
                             <img src="./img/tải xuống.svg" alt="">
                         </a>
                     </li>
-                    <li class="text"> <span>BRONCO</span></li>
+                    <li class="textspan"> <span>BRONCO</span></li>
                 </ul>
 
             </div>
@@ -63,17 +63,34 @@
 
 
     </div>
-    <div class="carausel-container">
-        <div class="carausel-slide">
-            <img src="./img/carowsel1.png " id="lastClone" alt="">
-            <img src="./img/carowsel2.png" alt="">
-            <img src="./img/carowsel1.png" alt="">
+    <div class="slideshow-container">
 
-            <img src="./img/carowsel2.png" id="firstClone" alt="">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          
+          <img src="./img/carowsel1.png" >
+          
         </div>
-        <i class="fal fa-chevron-left Btn" id="prevBtn"></i>
-        <i class="fal fa-chevron-right Btn" id="nextBtn"></i>
-    </div>
+      
+        <div class="mySlides fade">
+          
+          <img src="./img/carowsel2.png" >
+          
+        </div>
+      
+       
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      
+      
+      <!-- The dots/circles -->
+      <div class="threedot" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
     <div class="information-container">
         <div class="information-left information-item">
             <div class="h2">
@@ -98,7 +115,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="app.js"></script>
+    
     <div class="container-car">
         <div class="ao2 t-center">
         <sup>Available on 2019/2020/2021 New vehicles, Used and CPO vehicles, financed or leased for personal use
@@ -124,7 +141,7 @@
         </div>
     </div>
     
-
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
