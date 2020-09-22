@@ -1,9 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body{
+    max-width: 1440px;
     font-weight: 100;  
     font-size: 10px; 
     line-height: 1.32857143;
@@ -20,7 +21,7 @@ body{
     font-size: 0.8rem;
     color: #102b4e;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     left: 0;
     right: 0;
@@ -153,14 +154,14 @@ body{
     position: absolute;
     bottom: 25%;
     left: 0%;
-    z-index: 10001;
+    z-index: 3;
     
 } 
 #nextBtn{
     position: absolute;
     bottom: 25%;
     right: 0%;
-    z-index: 10001;
+    z-index: 3;
 } 
 .Btn:hover{
     background-color: rgb(255, 255, 255);
@@ -171,6 +172,7 @@ body{
 
 /* END carausel */
 
+/* INFORMATION */
  .information-container{
      margin: auto;
      display: grid;
@@ -202,6 +204,7 @@ body{
      color: black;
      background-color: white;
      cursor: pointer;
+     transition-duration: 0.4s;
  }
  .information-item .btn:hover{
      
@@ -210,5 +213,56 @@ body{
  .information-item div{
     margin-top: 40px;
  }
-   
+/* END INFORMATION */ 
+/* CARS */
+.container-car .ao2{
+    font-size: 0.9rem;
+    margin-top: 25px;
+    
+}
+.sfe{
+    font-size: 2.3rem;
+    font-weight: lighter;
+    padding: 20px 0px 0px 0px;
+       
+}
+.sof{
+    font-size: 1rem;
+    font-weight: lighter;
+    
+
+}
+.t-center{
+    text-align: center;
+}
+
+.container-car .btn-vehicle {
+    
+    margin-top: 40px;
+    margin-bottom: 20px;   
+    
+}
+.container-car .btn-vehicle a {
+    color: white;
+    background-color: #0276b3;
+    font-size: 1rem;
+    padding: 15px 75px;  
+    border: 1px solid #0276b3 ; 
+    transition-duration: 0.4s;   
+}
+.container-car .btn-vehicle a:hover{
+    border: 1px solid #0276b3 ;
+    background-color: white;
+    color: black;
+}
+.threecar{
+    width: 1440px;
+    height: auto;
+}
+.container-car .threecar img{
+    width: 100%;
+    height: auto;
+}
+
+/* END CARS */
 

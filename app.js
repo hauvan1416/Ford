@@ -14,14 +14,14 @@ carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 //buttonListeners
 nextBtn.addEventListener('click',() => {
       if(counter >= carauselImages.length - 1) return;   
-    carauselSlide.style.transition = "transform 0.4s ease-in-out";
+    carauselSlide.style.transition = "transform 0.6s ease-in-out";
     counter++;
     carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
     
 });
  prevBtn.addEventListener('click',() => {
       if (counter <= 0) return;   
-    carauselSlide.style.transition = "transform 0.4s ease-in-out";
+    carauselSlide.style.transition = "transform 0.6s ease-in-out";
     counter--;
     carauselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
 
